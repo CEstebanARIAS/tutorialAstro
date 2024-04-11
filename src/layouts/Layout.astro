@@ -1,4 +1,7 @@
 ---
+import Navegation from '../components/navegation.astro';
+import Footer from '../components/footer.astro';
+
 interface Props {
 	title: string;
 }
@@ -56,4 +59,22 @@ const { title } = Astro.props;
 			Courier New,
 			monospace;
 	}
+	.hamburger {
+  		padding-right: 20px;
+  		cursor: pointer;
+	}
+
+	.hamburger .line {
+  		display: block;
+  		width: 40px;
+  		height: 5px;
+  		margin-bottom: 10px;
+  		background-color: #ff9776;
+	}
+	@media screen and (min-width:510px) {
+    	.hamburger{
+        	display: none;
+    	}
+	}
+	
 </style>
