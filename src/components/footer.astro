@@ -1,0 +1,50 @@
+---
+const platform = "github";
+const username = "withastro";
+import Social from "./social.astro";
+---
+
+<footer>
+  <div class="footer">
+    <div class="links">
+      <Social platform="linkedin" username="in/carlosariasdev" />
+      <Social platform="github" username="CEstebanARIAS" />
+      <Social platform="instagram" username="esteban_.ac" />
+    </div>
+    <div class="morInfo">
+      <p>
+        Más información de mis proyectos en ¡
+        <a href={`https://www.${platform}.com/${username}`}>
+          {platform}
+        </a>!
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<style>
+  div.footer{
+    border-top: solid 1px;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 1rem;
+  }
+  
+  div.links{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: top;
+  }
+  p{
+    display: flex;
+    margin-top: 0;
+    justify-content: end;
+  }
+  a:hover {
+    color: gray;
+  }
+</style>

@@ -1,0 +1,31 @@
+---
+
+---
+
+<div class="nav-links">
+  <a href="/">Inicio</a>
+  <a href="/about">Sobre mi</a>
+  <a href="/blog">Blog</a>
+</div>
+
+<style>
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: auto;
+    border-bottom: solid 0.5px;
+  }
+
+  .nav-links a {
+    display: flex;
+    padding: 15px 20px;
+    font-size: 1rem;
+    justify-content: center;
+  }
+@media screen and (max-width: 510px){
+  .nav-links{
+    display: none;
+  }
+}
+</style>
+  
