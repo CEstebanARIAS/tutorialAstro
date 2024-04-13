@@ -1,12 +1,36 @@
 ---
 
 ---
+<button class="button-abrir" id="abrir">
+  <svg width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="white"  stroke-width="3"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6h16" /><path d="M7 12h13" /><path d="M10 18h10" /></svg>
+</button>
+<nav class="nav-bar" id="nav">
+  <ul class="nav-links">
+    <button class="button-cerrar" id="cerrar">
+    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="4"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
+    </button>
+    <li><a href="/">Inicio</a></li>
+    <li><a href="/about">Sobre mi</a></li>
+    <li><a href="/blog">Blog</a></li>
+  </ul>
+</nav>
 
-<div class="nav-links">
-  <a href="/">Inicio</a>
-  <a href="/about">Sobre mi</a>
-  <a href="/blog">Blog</a>
-</div>
+<script>
+  const nav = document.querySelector("#nav");
+  const abrir = document.querySelector("#abrir");
+  const cerrar = document.querySelector("#cerrar");
+
+
+  abrir.addEventListener("click", () => {
+    nav.classList.add("visible");
+  })
+
+  cerrar.addEventListener("click", ()=>{
+    nav.classList.remove("visible");
+  })
+  
+</script>
+
 
 <style>
   .nav-links {
@@ -14,16 +38,63 @@
     grid-template-columns: repeat(3, 1fr);
     width: auto;
     border-bottom: solid 0.5px;
+    list-style-type: none;
   }
-
+  button{
+    display: none;
+  }
   .nav-links a {
     display: flex;
     padding: 15px 20px;
     font-size: 1rem;
     justify-content: center;
+    
   }
-@media screen and (max-width: 510px){
-  
-}
+
+  @media screen and (max-width: 512px) {
+    .nav-bar{
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      background-color: rgb(255, 255, 255);
+      right: 0;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      box-shadow: 0 0 0 100vmax rgb(0,0,0, .5);
+    }
+    .nav-bar.visible{
+      opacity: 1;
+      visibility: visible;
+    }
+    .nav-links a{
+      font-family: sans-serif;
+      color: black;
+      font-size: 1.5rem;
+      border-bottom: solid 1px;
+    }
+    .nav-links {
+     display: grid;
+     grid-template-columns: repeat(1, 1fr);
+     justify-items: end;
+     border-bottom: 0;
+     padding: 1rem;
+    }
+    button{
+      display: block;
+      margin-left: auto;
+      border: 0;
+      pointer-events: ;
+    }
+    .button-abrir{
+      transform: scale(2);
+      background-color: #13151a;
+    }
+    .button-cerrar{   
+      transform: scale(1.5);   
+      margin-right: 15px;
+      background-color: white;
+      margin-bottom: 40px;
+    }
+  }
 </style>
-  
