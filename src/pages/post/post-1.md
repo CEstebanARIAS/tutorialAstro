@@ -1,5 +1,5 @@
 ---
-title: 'Mi primera publicación en el blog'
+title: 'Primeros pasos en Astro'
 pubDate: 2024-04-10
 description: 'Este es la primera publicación de mi nuevo blog Astro.'
 author: 'Alumno de Astro'

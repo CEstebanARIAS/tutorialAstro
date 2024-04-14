@@ -13,10 +13,7 @@ import Social from "./social.astro";
     </div>
     <div class="morInfo">
       <p>
-        Más información de mis proyectos en ¡
-        <a href={`https://www.${platform}.com/${username}`}>
-          {platform}
-        </a>!
+       Todos los derechos reservados
       </p>
     </div>
   </div>
@@ -26,7 +23,7 @@ import Social from "./social.astro";
 
 
 <style>
-  div.footer{
+  .footer{
     border-top: solid 1px;
     margin-top: 2rem;
     display: grid;
@@ -34,7 +31,7 @@ import Social from "./social.astro";
     font-size: 1rem;
   }
   
-  div.links{
+  .links{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     align-items: top;
@@ -43,8 +40,16 @@ import Social from "./social.astro";
     display: flex;
     margin-top: 0;
     justify-content: end;
+    font-size: small;
+    color: rgba(181, 181, 181, 0.27);
   }
   a:hover {
     color: gray;
   }
+  @media screen and (max-width: 512px) {
+    .links{
+      font-size: small;
+    }
+  }
+  
 </style>
