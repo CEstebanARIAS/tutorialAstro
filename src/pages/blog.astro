@@ -10,7 +10,7 @@ const allPosts = await Astro.glob('../pages/post/*.md');
   <Layout title={pageTitle}>
     <main>
         <Navegation/>
-      <h1>Mi blog de aprendizaje sobre Astro</h1>
+      <h1>Mi blog de aprendizaje sobre ASTRO</h1>
       <p>
         Aquí es donde publicaré acerca de mi viaje aprendiendo Astro.
           {allPosts.map((post) => 
@@ -40,7 +40,6 @@ const allPosts = await Astro.glob('../pages/post/*.md');
 	
 	h1 {
 		font-size: 4rem;
-		font-weight: 700;
 		line-height: 1;
 		text-align: center;
 		
@@ -55,6 +54,8 @@ const allPosts = await Astro.glob('../pages/post/*.md');
 		h1{
 			border-top: solid 1px;
 			padding-top: 2rem;
+			margin-top: 1rem;
+			font-size: 3em;
 		}
 	}
 	
