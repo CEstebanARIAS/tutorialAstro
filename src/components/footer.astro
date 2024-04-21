@@ -1,6 +1,4 @@
 ---
-const platform = "github";
-const username = "withastro";
 import Social from "./social.astro";
 ---
 
@@ -11,11 +9,17 @@ import Social from "./social.astro";
       <Social platform="github" username="CEstebanARIAS" />
       <Social platform="instagram" username="esteban_.ac" />
     </div>
+    <div class="media">
+      <a href="https://www.linkedin.com/in/carlosariasdev"><img src="linkedin.svg" alt="Linkedin"></a>
+      <a href="https://www.github.com/CEstebanARIAS"><img src="github.svg" alt="GitHub"></a>
+      <a href="https://www.instagram.com/esteban_.ac"><img src="instagram.svg" alt="Instagram"></a>      
+    </div>
     <div class="morInfo">
       <p>
        Todos los derechos reservados
       </p>
     </div>
+   
   </div>
 </footer>
 
@@ -23,20 +27,25 @@ import Social from "./social.astro";
 
 
 <style>
+  .media{
+    display: none;
+  }
   .footer{
     border-top: solid 1px;
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 10fr);
+    grid-auto-columns: min-content;
     font-size: 1rem;
   }
   
   .links{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: top;
   }
   p{
+    
     display: flex;
     margin-top: 0;
     justify-content: end;
@@ -47,9 +56,21 @@ import Social from "./social.astro";
     color: gray;
   }
   @media screen and (max-width: 512px) {
-    .links{
-      font-size: small;
+    .footer{
+      gap: 30px;
+      grid-template-columns: 90px 1fr;
     }
-  }
+    .links{
+      display: none;
+    }
+    .media{
+      display: unset;
+      margin-top: 3px;
+    
+    }
+    a:hover{
+      
+    }
   
+  }
 </style>
