@@ -8,7 +8,6 @@ const allPosts = await Astro.glob('../pages/post/*.md');
 ---
 
   <Layout title={pageTitle}>
-    <main>
         <Navegation/>
       <h1>Mi blog de aprendizaje sobre ASTRO</h1>
       <p>
@@ -21,23 +20,10 @@ const allPosts = await Astro.glob('../pages/post/*.md');
 			)}
       </p>
 	  	<Footer/>
-    </main>
   </Layout>
 
 
   <style>
-	
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-		
-	}
-	
 	h1 {
 		font-size: 4rem;
 		line-height: 1;
