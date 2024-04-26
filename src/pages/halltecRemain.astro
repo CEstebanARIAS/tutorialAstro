@@ -1,0 +1,174 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navegation from "../components/navegation.astro";
+---
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.avif" />
+    </head>
+    <body>
+        <div class="contenedor"></div>
+        <nav>
+            <div class="Logo">
+                <a href="/proyect"><img src="/halltecLogo.avif" alt="Logo no Original de Halltec" /></a>
+            </div>
+            <ul>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Servicios</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+        <section class="info-formulario">
+            <div class="info">
+                <h1 class="titleFirst">Centro Tecnologico</h1>
+                <p class="services">
+                    Diseño Web| Diseño Grafico| Aplicaciones Moviles| Coworking| Asesorias
+                </p>
+            </div>
+            <div class="formulario">
+                <h1>Contáctanos</h1>
+                <input class="inputs" type="text" name="nombre" id="nombre" placeholder="ingrese su nombre">
+                <input class="inputs" type="email" name="email" id="email" placeholder="ingrese su correo electronico">
+                <input class="inputs" type="number" name="telefono" id="telefono" placeholder="ingrese su numero de contacto">
+                <input class="botons" type="submit" value="Contactar">
+            </div>
+        </section>
+    </body>
+</html>
+
+
+
+<!--TODO////
+
+//COLOCAR LA IMAGEN DE FONDO OSCURA. 
+AÑADIR INFORMACION EN LA SIGUIENTE SECTION
+// CONFIGURAR LAS MEDIAQUERIS PARA MOVIL
+-->
+
+<style>
+    body{
+        font-family: sans-serif;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.722);
+    }
+    
+    .contenedor{
+        background: url("halltec-coworking.avif");
+        background-size: cover;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 800px;
+        position: fixed;
+        z-index: -1;
+    }
+    .info-formulario{
+        display: grid;
+        text-align: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        align-items: center;
+    }
+    nav{
+        margin-bottom: 4rem;
+    }
+    .botons{
+        border: none;
+        border-radius: 3px;
+        background-color: rgb(242, 78, 75);
+        width: 70%;
+        padding: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        color: white;
+        font-size: 20px
+    }
+    .formulario h1{
+        font-size: 4rem;
+        margin-top: 0px;
+        padding: 2rem;
+        text-align: center;
+        
+        color: black;
+        border-bottom: solid 1px red;
+        padding-bottom: 0;
+    }
+    .formulario{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        width: 550px;
+        border-radius: 2px;
+        background-color: rgb(255, 255, 255);
+    }
+    .inputs{
+        font-size: 18px;
+        border-radius: 4px;
+        border: solid 1px ;
+        width: 450px;
+        padding: 15px;
+        margin: 10px;
+    }
+    .titleFirst{
+        color: white;
+        font-size: 6rem;
+        line-height: 1;  
+        margin-left: 5rem; 
+        padding-bottom: 10px;     
+        margin-bottom: 0px;
+        border-bottom: solid 1px red; 
+    }
+    .Logo{
+        position: absolute;
+        padding-left: 10rem;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+        transition: 100ms;
+    }
+    a:hover{
+        color: #FF1A2B; 
+        transition: 100ms
+    }
+    nav {
+        height: 80px;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr 800px;
+        align-items: center;
+    }
+    li{
+        transition: 300ms;
+    }
+    li:hover{
+        font-size: 25px;
+        transition: 100ms;  
+    }
+    ul {
+        grid-column-start: 2;
+        font-size: 20px;
+        margin-right: 8rem;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        padding: 10px;
+        color: white;
+        text-align: center;
+        list-style: none;
+    }
+    img {
+        width: 200px;
+        height: auto;
+        transition: 500ms
+    }
+    img:hover{
+        
+        width: 250px;
+        height: auto;
+        transition: 300ms;
+    }
+</style>
