@@ -21,7 +21,7 @@ import Navegation from "../components/navegation.astro";
                 <li><a href="">Contacto</a></li>
             </ul>
         </nav>
-        <section class="info-formulario">
+        <section>
             <div class="info">
                 <h1 class="titleFirst">Centro Tecnologico</h1>
                 <p class="services">
@@ -33,7 +33,7 @@ import Navegation from "../components/navegation.astro";
                 <input class="inputs" type="text" name="nombre" id="nombre" placeholder="ingrese su nombre">
                 <input class="inputs" type="email" name="email" id="email" placeholder="ingrese su correo electronico">
                 <input class="inputs" type="number" name="telefono" id="telefono" placeholder="ingrese su numero de contacto">
-                <input class="botons" type="submit" value="Contactar">
+                <button class="contactar" id="contactar" >Contactar</button>
             </div>
         </section>
     </body>
@@ -42,42 +42,39 @@ import Navegation from "../components/navegation.astro";
 
 
 <!--TODO////
-
-//COLOCAR LA IMAGEN DE FONDO OSCURA. 
 AÑADIR INFORMACION EN LA SIGUIENTE SECTION
-// CONFIGURAR LAS MEDIAQUERIS PARA MOVIL
 -->
 
 <style>
     body{
-        font-family: sans-serif;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.722);
-    }
-    
-    .contenedor{
         background: url("halltec-coworking.avif");
         background-size: cover;
+        background-repeat: no-repeat;
+        font-family: sans-serif;
+        color: white;   
+    }
+    .contenedor{
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 800px;
-        position: fixed;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.636);
         z-index: -1;
     }
-    .info-formulario{
+    section{
         display: grid;
-        text-align: center;
         grid-template-columns: repeat(2, 1fr);
-        gap: 3rem;
-        align-items: center;
+        gap: 5rem;
+        text-align: center;
+        padding: 2rem;
     }
     nav{
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
     }
-    .botons{
+    .contactar{
         border: none;
-        border-radius: 3px;
+        border-radius: 5px;
         background-color: rgb(242, 78, 75);
         width: 70%;
         padding: 1rem;
@@ -89,20 +86,14 @@ AÑADIR INFORMACION EN LA SIGUIENTE SECTION
     .formulario h1{
         font-size: 4rem;
         margin-top: 0px;
+        margin-bottom: 5px;
         padding: 2rem;
         text-align: center;
-        
         color: black;
-        border-bottom: solid 1px red;
-        padding-bottom: 0;
     }
     .formulario{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        width: 550px;
-        border-radius: 2px;
+        margin: 20px;
+        border-radius: 5px;
         background-color: rgb(255, 255, 255);
     }
     .inputs{
@@ -113,18 +104,19 @@ AÑADIR INFORMACION EN LA SIGUIENTE SECTION
         padding: 15px;
         margin: 10px;
     }
+    .services{
+        font-family: monospace
+    }
     .titleFirst{
         color: white;
         font-size: 6rem;
-        line-height: 1;  
-        margin-left: 5rem; 
+        line-height: 1;
         padding-bottom: 10px;     
         margin-bottom: 0px;
-        border-bottom: solid 1px red; 
     }
     .Logo{
-        position: absolute;
-        padding-left: 10rem;
+        display: flex;
+        justify-content: center;
     }
     a{
         color: white;
@@ -171,4 +163,34 @@ AÑADIR INFORMACION EN LA SIGUIENTE SECTION
         height: auto;
         transition: 300ms;
     }
+    @media screen and (max-width: 980px) {
+    	section{
+            display: grid;
+            grid-template-columns: repeat(1, 2fr);
+            gap: 2rem;
+        }
+        .contenedor{
+            background-color: rgba(0, 0, 0, 0.382);
+        }
+        h1{
+            margin-top: 0;
+        }
+        img{
+            margin-left: 2rem;
+        }
+        nav{
+            gap: 3rem;
+
+        }
+        .titleFirst{
+            font-size: 7rem;
+        }
+        .formulario{
+            margin-left: 7rem;
+            margin-right: 7rem;
+        }
+        ul{
+            display: none;
+        }
+	}
 </style>
